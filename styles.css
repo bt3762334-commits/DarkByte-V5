@@ -1,12 +1,56 @@
- body {
 
- 	background-color: #f1f1f1;
- }
- .red-border {
-	border:2px solid red;
+/* DarkByte V5 */
+*{margin:0;padding:0;box-sizing:border-box;scroll-behavior:smooth;font-family:'Poppins',sans-serif}
+body{background:#050816;color:#fff;overflow-x:hidden}
+::-webkit-scrollbar{width:8px}
+::-webkit-scrollbar-thumb{background:#00f5d4;border-radius:10px}
+body::before{
+content:"";position:fixed;inset:0;
+background:
+radial-gradient(circle at 20% 20%, #00f5d420, transparent 25%),
+radial-gradient(circle at 80% 30%, #00bbf920, transparent 25%),
+radial-gradient(circle at 50% 80%, #00f5d420, transparent 25%);
+z-index:-1
 }
-
-
-.fine-margin {
-	margin: 60px;
+#loader{position:fixed;inset:0;background:#050816;display:flex;justify-content:center;align-items:center;z-index:9999}
+#loader h1{color:#00f5d4;font-size:3rem;letter-spacing:5px}
+.navbar{position:fixed;top:0;width:100%;padding:20px 8%;display:flex;justify-content:space-between;align-items:center;background:rgba(0,0,0,.25);backdrop-filter:blur(15px);z-index:1000}
+.logo{font-size:2rem;font-weight:800}.logo span{color:#00f5d4}
+.nav-links{display:flex;gap:30px;list-style:none}
+.nav-links a{text-decoration:none;color:#fff}.nav-links a:hover{color:#00f5d4}
+.hero{min-height:100vh;display:flex;justify-content:space-between;align-items:center;padding:120px 10%;gap:60px}
+.hero-content h1{font-size:4rem;margin-bottom:15px}
+.hero-content h2{color:#00f5d4;margin-bottom:20px}
+.hero-content p{color:#cfcfcf;line-height:1.8;max-width:650px}
+.hero-image img{width:350px;border-radius:50%;border:4px solid #00f5d4;box-shadow:0 0 40px #00f5d4;animation:float 4s ease-in-out infinite}
+.hero-buttons{margin-top:30px}
+.btn{padding:14px 30px;border-radius:30px;text-decoration:none;display:inline-block;transition:.3s}
+.primary-btn{background:#00f5d4;color:#000;margin-right:15px}
+.secondary-btn{border:2px solid #00f5d4;color:#fff}
+.btn:hover,.skill-card:hover,.project-card:hover,.certificate-card:hover{transform:translateY(-8px)}
+.section{padding:100px 10%}
+.section-title{text-align:center;font-size:2.5rem;color:#00f5d4;margin-bottom:50px}
+.about-container{max-width:900px;margin:auto;text-align:center}
+.about-container p{line-height:1.9;color:#d1d5db;margin-bottom:20px}
+.skills-grid,.projects-grid,.certificate-grid{display:grid;gap:25px;grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}
+.skill-card,.project-card{background:rgba(255,255,255,.05);padding:30px;border-radius:20px;backdrop-filter:blur(10px);transition:.3s}
+.skill-card:hover,.project-card:hover{box-shadow:0 0 20px #00f5d4}
+.skill-card i{font-size:3rem;color:#00f5d4;margin-bottom:15px}
+.project-card h3,.certificate-info h3{color:#00f5d4}
+.project-card p{color:#d1d5db;line-height:1.8}
+.certificate-card{overflow:hidden;border-radius:20px;background:#111827;transition:.3s}
+.certificate-card img{width:100%;display:block;transition:.4s}
+.certificate-card:hover img{transform:scale(1.05)}
+.certificate-info{padding:20px;text-align:center}
+.contact-container{display:flex;gap:20px;justify-content:center;flex-wrap:wrap}
+.contact-btn{padding:15px 30px;border-radius:30px;background:#00f5d4;color:#000;text-decoration:none;font-weight:600}
+footer{text-align:center;padding:40px 20px;border-top:1px solid rgba(255,255,255,.1)}
+footer h3{color:#00f5d4}
+#scrollTopBtn{position:fixed;bottom:25px;right:25px;width:50px;height:50px;border:none;border-radius:50%;background:#00f5d4;display:none;cursor:pointer}
+@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-15px)}}
+@media(max-width:991px){
+.hero{flex-direction:column-reverse;text-align:center}
+.navbar{flex-direction:column;gap:15px}
+.nav-links{flex-wrap:wrap;justify-content:center}
+.hero-image img{width:280px}
 }
