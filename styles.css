@@ -1,0 +1,12 @@
+ body {
+
+ 	background-color: #f1f1f1;
+ }
+ .red-border {
+	border:2px solid red;
+}
+
+
+.fine-margin {
+	margin: 60px;
+}
